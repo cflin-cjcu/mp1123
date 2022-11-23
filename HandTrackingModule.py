@@ -47,6 +47,7 @@ class HandDetector:
         """
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         self.results = self.hands.process(imgRGB)
+        print(self.results.multi_hand_landmarks)
         allHands = []
         h, w, c = img.shape
         if self.results.multi_hand_landmarks:
